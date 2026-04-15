@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ремонт компьютеров в Новосибирске. Прайс-лист, отзывы, услуги и контакты.">
+  <title>MASTER SERVICE — Ремонт техники</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="MASTER SERVICE">
+        <span class="brand-logo" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 5C25.1472 5 5 25.1472 5 50C5 74.8528 25.1472 95 50 95C74.8528 95 95 74.8528 95 50C95 25.1472 74.8528 5 50 5ZM50 85C30.67 85 15 69.33 15 50C15 30.67 30.67 15 50 15C69.33 15 85 30.67 85 50C85 69.33 69.33 85 50 85Z" fill="#1e40af"/>
+            <circle cx="50" cy="50" r="8" fill="#1e40af"/>
+            <path d="M50 35C41.7157 35 35 41.7157 35 50C35 58.2843 41.7157 65 50 65C58.2843 65 65 58.2843 65 50C65 41.7157 58.2843 35 50 35ZM50 55C47.2386 55 45 52.7614 45 50C45 47.2386 47.2386 45 50 45C52.7614 45 55 47.2386 55 50C55 52.7614 52.7614 55 50 55Z" fill="#1e40af"/>
+            <path d="M70 50H80" stroke="#1e40af" stroke-width="2"/>
+            <path d="M20 50H30" stroke="#1e40af" stroke-width="2"/>
+            <path d="M50 70V80" stroke="#1e40af" stroke-width="2"/>
+            <path d="M50 20V30" stroke="#1e40af" stroke-width="2"/>
+            <path d="M42 22C42.5523 22 43 22.4477 43 23V77C43 77.5523 42.5523 78 42 78H38C37.4477 78 37 77.5523 37 77V23C37 22.4477 37.4477 22 38 22H42Z" fill="white" stroke="#1e40af" stroke-width="3"/>
+            <path d="M25 15C22.2386 15 20 17.2386 20 20C20 22.7614 22.2386 25 25 25H30C32.7614 25 35 22.7614 35 20C35 17.2386 32.7614 15 30 15H25Z" fill="white" stroke="#1e40af" stroke-width="3"/>
+            <path d="M60 15C57.2386 15 55 17.2386 55 20C55 22.7614 57.2386 25 60 25H65C67.7614 25 70 22.7614 70 20C70 17.2386 67.7614 15 65 15H60Z" fill="white" stroke="#1e40af" stroke-width="3"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">MASTER SERVICE</span>
+          <span class="brand-subtitle">РЕМОНТ ТЕХНИКИ</span>
+        </span>
+      </a>
+      <nav class="header-nav" aria-label="Основная навигация">
+        <a href="#home">Главная</a>
+        <a href="#price">Прайс</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">О мастере</a>
+      </nav>
+      <a class="header-phone" href="tel:+79628268247">+7 962 826 82 47</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container">
+        <div class="hero-content hero-centered">
+          <h1>Профессиональный ремонт вашей техники в Новосибирске</h1>
+          <p class="hero-text">
+            Специализированный сервисный центр: от принтеров до телевизоров.
+            Быстро, качественно, с гарантией.
+          </p>
+          <a class="btn btn-primary" href="#price">Смотреть прайс</a>
+        </div>
+      </div>
+      <div class="offers-strip" aria-label="Преимущества сервиса MASTER SERVICE">
+        <div class="offers-inner">
+          <article class="offer-item">
+            <div class="offer-head">
+              <div class="offer-icon" aria-hidden="true">🎁</div>
+              <h3><span class="hero-accent">СКИДКА 20%</span></h3>
+            </div>
+            <p>Для пенсионеров и при заказе с сайта.</p>
+          </article>
+          <article class="offer-item">
+            <div class="offer-head">
+              <div class="offer-icon" aria-hidden="true">🛡️</div>
+              <h3><span class="hero-accent">ГАРАНТИЯ ДО 2 ЛЕТ</span></h3>
+            </div>
+            <p>Официальный чек и гарантийный талон на все работы и запчасти.</p>
+          </article>
+          <article class="offer-item">
+            <div class="offer-head">
+              <div class="offer-icon" aria-hidden="true">⚡</div>
+              <h3><span class="hero-accent">СРОЧНЫЙ ВЫЕЗД</span></h3>
+            </div>
+            <p>Мастер у вас в течение 60 минут или в удобное для вас время.</p>
+          </article>
+          <article class="offer-item">
+            <div class="offer-head">
+              <div class="offer-icon" aria-hidden="true">🔍</div>
+              <h3><span class="hero-accent">0₽ ДИАГНОСТИКА</span></h3>
+            </div>
+            <p>Выезд и проверка техники бесплатно при продолжении работ.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section">
+      <div class="container">
+
+        <h2 class="section-title">Основные направления</h2>
+        <div class="services-grid">
+          <a class="service-card" href="#price" aria-label="Перейти к прайсу: Ремонт и апгрейд ПК / Ноутбуков">
+            <div class="service-head">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 6.5C4 5.67 4.67 5 5.5 5h13c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5h-13c-.83 0-1.5-.67-1.5-1.5v-8Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M2 19h20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Ремонт и апгрейд ПК / Ноутбуков</h3>
+            </div>
+          </a>
+          <a class="service-card" href="#price" aria-label="Перейти к прайсу: Установка Windows и настройка ПО">
+            <div class="service-head">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="7.5" width="17" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M9 7.5V6a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 6v1.5" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M3.5 12h17" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+              </div>
+              <h3>Установка Windows и настройка ПО</h3>
+            </div>
+          </a>
+          <a class="service-card" href="#price" aria-label="Перейти к прайсу: Ремонт ТВ и настройка приставок">
+            <div class="service-head">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="5" width="17" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="m10 19 2-2 2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Ремонт ТВ и настройка приставок</h3>
+            </div>
+          </a>
+          <a class="service-card" href="#price" aria-label="Перейти к прайсу: Ремонт принтеров и МФУ">
+            <div class="service-head">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="6.5" y="4.5" width="11" height="5" rx="1" stroke="currentColor" stroke-width="1.8"/>
+                  <rect x="4.5" y="9.5" width="15" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                  <rect x="7.5" y="14.5" width="9" height="5" rx="1" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+              </div>
+              <h3>Ремонт принтеров и МФУ</h3>
+            </div>
+          </a>
+          <a class="service-card" href="#price" aria-label="Перейти к прайсу: Настройка Wi-Fi и смартфонов">
+            <div class="service-head">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4.5 10.5a10.5 10.5 0 0 1 15 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M7.5 13.5a6.5 6.5 0 0 1 9 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M10.5 16.5a2.5 2.5 0 0 1 3 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="12" cy="19" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <h3>Настройка Wi‑Fi и смартфонов</h3>
+            </div>
+          </a>
+          <a class="service-card" href="#price" aria-label="Перейти к прайсу: Видеонаблюдение и Умный дом">
+            <div class="service-head">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="7.5" width="11" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="m14.5 10 5-2.5v9L14.5 14" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Видеонаблюдение и Умный дом</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="price section" id="price">
+      <div class="container">
+        <h2 class="section-title">Категории услуг и цены</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Ремонт компьютеров и ноутбуков</h3>
+            <div class="price-list">
+              <div class="price-row"><span>Диагностика</span><span>Бесплатно</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Чистка от пыли</span><span>от 490 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Замена термопасты</span><span>от 600 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Замена экрана (матрицы)</span><span>от 1500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Ремонт после залития</span><span>от 1200 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+            </div>
+            <details>
+              <summary>Все услуги по ПК</summary>
+              <div class="price-row"><span>Замена клавиатуры</span><span>от 800 ₽</span></div>
+              <div class="price-row"><span>Ремонт корпуса</span><span>от 1000 ₽</span></div>
+            </details>
+          </div>
+        
+          <div class="service-card">
+            <h3>Установка Windows и настройка ПО</h3>
+            <div class="price-list">
+              <div class="price-row"><span>Установка Windows 10/11</span><span>от 990 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Оптимизация и ускорение</span><span>от 500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Удаление вирусов</span><span>от 400 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Установка Office / Драйверов</span><span>от 390 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Восстановление данных</span><span>от 1500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+            </div>
+            <details>
+              <summary>Все услуги по ПО</summary>
+              <div class="price-row"><span>Настройка родительского контроля</span><span>600 ₽</span></div>
+            </details>
+          </div>
+        
+          <div class="service-card">
+            <h3>Ремонт ТВ и настройка приставок</h3>
+            <div class="price-list">
+              <div class="price-row"><span>Диагностика ТВ</span><span>Бесплатно</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Ремонт подсветки</span><span>от 1800 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Ремонт блока питания</span><span>от 1200 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Настройка Smart TV</span><span>700 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Прошивка приставки</span><span>от 800 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+            </div>
+            <details>
+              <summary>Все услуги по ТВ</summary>
+              <div class="price-row"><span>Замена разъемов</span><span>от 900 ₽</span></div>
+            </details>
+          </div>
+        
+          <div class="service-card">
+            <h3>Ремонт принтеров и МФУ</h3>
+            <div class="price-list">
+              <div class="price-row"><span>Диагностика принтера</span><span>Бесплатно</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Чистка и профилактика</span><span>от 600 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Устранение замятия бумаги</span><span>от 500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Замена роликов захвата</span><span>от 800 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Прошивка принтера</span><span>от 1000 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+            </div>
+            <details>
+              <summary>Все услуги по принтерам</summary>
+              <div class="price-row"><span>Ремонт сканера</span><span>от 1200 ₽</span></div>
+            </details>
+          </div>
+        
+          <div class="service-card">
+            <h3>Настройка Wi-Fi и сетей</h3>
+            <div class="price-list">
+              <div class="price-row"><span>Настройка роутера</span><span>от 490 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Прокладка кабеля (метр)</span><span>от 100 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Настройка моста Wi-Fi</span><span>от 1500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Настройка локальной сети</span><span>от 800 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Усиление сигнала Wi-Fi</span><span>от 1200 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+            </div>
+            <details>
+              <summary>Все услуги по сетям</summary>
+              <div class="price-row"><span>Настройка сетевого хранилища (NAS)</span><span>от 2000 ₽</span></div>
+            </details>
+          </div>
+        
+          <div class="service-card">
+            <h3>Видеонаблюдение и Умный дом</h3>
+            <div class="price-list">
+              <div class="price-row"><span>Монтаж камеры (1 шт)</span><span>от 1500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Настройка удаленного доступа</span><span>900 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Установка видеодомофона</span><span>от 2500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Настройка датчиков умного дома</span><span>от 500 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+              <div class="price-row"><span>Сборка щита автоматики</span><span>от 5000 ₽</span><a class="btn-small" href="#contacts">Заказать</a></div>
+            </div>
+            <details>
+              <summary>Все услуги по монтажу</summary>
+              <div class="price-row"><span>Обслуживание систем</span><span>от 1000 ₽</span></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-how-it-works">
+      <div class="container">
+        <h2 class="section-title">Как мы решаем вашу проблему</h2>
+    
+        <div class="works-grid">
+          <div class="work-step">
+            <div class="work-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <div class="work-accent-line"></div>
+            </div>
+            <h3>Оставьте заявку</h3>
+            <p>Позвоните нам или оставьте заявку через форму на сайте</p>
+          </div>
+    
+          <div class="work-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+    
+          <div class="work-step">
+            <div class="work-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div class="work-accent-line"></div>
+            </div>
+            <h3>Мастер едет к вам</h3>
+            <p>Специалист прибудет по адресу в течение 60 минут</p>
+          </div>
+    
+          <div class="work-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+    
+          <div class="work-step">
+            <div class="work-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+              <div class="work-accent-line"></div>
+            </div>
+            <h3>Диагностика</h3>
+            <p>Мастер находит неисправность и подбирает запчасти</p>
+          </div>
+    
+          <div class="work-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+    
+          <div class="work-step">
+            <div class="work-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div class="work-accent-line"></div>
+            </div>
+            <h3>Ремонт и гарантия</h3>
+            <p>Согласование цены, ремонт и выдача чека с гарантией</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="master section" id="master">
+      <div class="container master-grid">
+        
+        <div class="master-photo-box">
+          <img src="images/master1.jpg" alt="Антон Хофман" class="master-img">
+        </div>
+    
+        <div class="master-content">
+          <p class="section-label">Ваш мастер</p>
+          <h2>Антон Хофман</h2>
+          <div class="master-subtitle">мастер с 10-летним стажем</div>
+          
+          <p>
+            Специализируюсь на ремонте ПК и ноутбуков, настройке программного обеспечения,
+            восстановлении данных и модернизации техники.
+          </p>
+          <p>
+            Работаю аккуратно, объясняю причины неисправности простым языком и предлагаю
+            оптимальные варианты ремонта без лишних услуг.
+          </p>
+        </div>
+    
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <p class="section-label">Отзывы</p>
+        <h2>Что говорят клиенты</h2>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <h3>Ольга</h3>
+            <p>Компьютер сильно тормозил, мастер приехал в тот же день и все исправил за час.</p>
+          </article>
+          <article class="review-card">
+            <h3>Андрей</h3>
+            <p>Переустановили Windows и сохранили все важные файлы. Работает быстро и стабильно.</p>
+          </article>
+          <article class="review-card">
+            <h3>Марина</h3>
+            <p>Настроили Wi‑Fi и принтер в офисе. Понравился аккуратный подход и четкие цены.</p>
+          </article>
+          <article class="review-card">
+            <h3>Сергей</h3>
+            <p>Заменили жесткий диск на SSD, ноутбук стал заметно быстрее. Рекомендую мастера.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section" id="contacts">
+    <div class="container footer-grid">
+      <div>
+        <h2>О компании и контакты</h2>
+        <p>Профессиональный сервис с гарантией. Работаем на результат с 2012 года.</p>
+        <p>Новосибирск</p>
+          <p><a href="tel:+79628268247">+7 (962) 826-82-47</a></p>
+          <p><a href="mailto:aleksey.remont@email.ru">aleksey.remont@email.ru</a></p>
+          <p>@masterservice.nsk</p>
+      </div>
+      <div>
+        <h3>График работы</h3>
+        <p>ПН-ВС: круглосуточно</p>
+      </div>
+      <div>
+        <h3>Быстрая заявка</h3>
+        <a class="btn btn-primary" href="tel:+79628268247">Позвонить мастеру</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions" aria-label="Быстрые контакты">
+    <a class="floating-btn floating-btn-tg" href="https://t.me/" aria-label="Telegram">✈️</a>
+    <a class="floating-btn floating-btn-max" href="#" aria-label="Max">M</a>
+    <a class="floating-btn floating-btn-call" href="tel:+79628268247" aria-label="Позвонить">📞</a>
+  </div>
+
+  <script>
+    (function () {
+      const header = document.querySelector(".site-header");
+      if (!header) return;
+
+      const toggleScrolledHeader = () => {
+        header.classList.toggle("is-scrolled", window.scrollY > 8);
+      };
+
+      toggleScrolledHeader();
+      window.addEventListener("scroll", toggleScrolledHeader, { passive: true });
+    })();
+  </script>
+</body>
+</html>

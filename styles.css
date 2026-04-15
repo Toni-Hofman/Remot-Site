@@ -1,0 +1,875 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f8faff;
+  --surface-soft: rgba(255, 255, 255, 0.78);
+  --text: #1f2937;
+  --muted: #4b5563;
+  --line: #d8e1f2;
+  --accent: #1e40af;
+  --accent-soft: #e8efff;
+  --accent-dark: #1e3a8a;
+  --radius: 12px;
+  --shadow: 0 12px 32px rgba(30, 64, 175, 0.12);
+  --container: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(30, 64, 175, 0.09), transparent 32%),
+    radial-gradient(circle at 88% 13%, rgba(30, 64, 175, 0.07), transparent 35%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 45%, #ffffff 100%);
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+h1 {
+  font-size: clamp(1.65rem, 3.8vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #1e40af;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  margin-bottom: 1.25rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  box-shadow: none;
+  transition: background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease, -webkit-backdrop-filter 0.25s ease;
+}
+
+.header-inner {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  transition: min-height 0.25s ease, padding 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+}
+
+.site-header.is-scrolled .header-inner {
+  min-height: 60px;
+}
+
+.site-header.is-scrolled .brand-logo {
+  width: 48px;
+  height: 48px;
+  flex-basis: 48px;
+}
+
+.site-header.is-scrolled .brand-title {
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+}
+
+.site-header.is-scrolled .brand-subtitle {
+  font-size: 0.68rem;
+  margin-top: 0.2rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-left: auto;
+}
+
+.header-nav a {
+  font-size: 0.96rem;
+  font-weight: 300;
+  color: #1e3a8a;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: #1e40af;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent);
+}
+
+.brand-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 56px;
+}
+
+.brand-logo svg {
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.05;
+}
+
+.brand-title {
+  font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: 0.02em;
+}
+
+.brand-subtitle {
+  font-size: 0.76rem;
+  color: #1e3a8a;
+  letter-spacing: 0.14em;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+.header-phone {
+  font-size: clamp(1rem, 1.9vw, 1.35rem);
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.hero {
+  padding-top: 5.5rem;
+  padding-bottom: 2.2rem;
+  position: relative;
+  background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(9, 202, 236, 0.5)), url("./images/panel1.jpg?v=2") center center / cover no-repeat;
+  overflow: hidden;
+  isolation: isolate; min-height: 400px; /* Чтобы блок не «схлопывался» */
+}
+
+.hero-text {
+  max-width: 62ch;
+}
+
+.hero::before {
+  content: none;
+}
+
+.hero h1 {
+  font-size: clamp(1.49rem, 3.42vw, 2.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  color: #1e3b8a;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 0;
+}
+
+.master-photo,
+
+.review-card,
+.site-footer,
+.master-content {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.hero-content {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+.master-content {
+  padding: 1.4rem;
+}
+
+.hero-centered {
+  text-align: center;
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.hero-centered .hero-text {
+  margin-inline: auto;
+}
+
+.offers-strip {
+  margin-top: 2rem;
+  width: 100%;
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.offers-inner {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.offer-item {
+  padding: 0.38rem 0.62rem 0.42rem;
+  position: relative;
+}
+
+.offer-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 1px;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.offer-icon {
+  font-size: 1rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.offer-head {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.1rem;
+}
+
+.offer-item h3 {
+  margin: 0;
+  font-size: 0.84rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.offer-item p {
+  margin: 0;
+  font-size: 0.69rem;
+  line-height: 1.22;
+  color: rgba(240, 246, 255, 0.92);
+}
+
+.hero-accent {
+  color: #ffb300;
+}
+
+.master-photo {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  color: #4b5563;
+  font-weight: 600;
+  background: linear-gradient(145deg, #eef3ff 0%, #ffffff 100%);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary,
+.btn-small {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.hero .btn-primary {
+  background: #ff7c02;
+  color: #1a1000;
+  border-radius: 4px;
+  padding: 0.72rem 1.04rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 8px 20px rgba(255, 123, 0, 0.28), 0 1px 4px rgba(15, 23, 42, 0.1);
+}
+
+.hero .btn-primary:hover {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-small:hover {
+  background: var(--accent-dark);
+}
+
+.btn-small {
+  padding: 0.55rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+.service-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.service-icon {
+  width: 2.9rem;
+  height: 2.9rem;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  flex: 0 0 2.9rem;
+}
+
+.service-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.services-title {
+  color: #000000;
+  font-weight: 900;
+  font-size: clamp(2rem, 4.8vw, 3.4rem);
+  line-height: 1.08;
+  text-align: center;
+}
+
+.site-footer {
+  color: #1f2937;
+  background: #f4f7ff;
+}
+
+.site-footer p,
+.site-footer h2,
+.site-footer h3,
+.site-footer a {
+  color: inherit;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.floating-actions {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease;
+}
+
+.floating-btn:hover {
+  transform: translateY(-2px);
+}
+
+.floating-btn-tg {
+  background: #229ed9;
+}
+
+.floating-btn-max {
+  background: #0f172a;
+}
+
+.floating-btn-call {
+  background: #22c55e;
+  animation: pulse-call 1.9s infinite;
+}
+
+@keyframes pulse-call {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5), 0 12px 24px rgba(0, 0, 0, 0.22);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(34, 197, 94, 0), 0 12px 24px rgba(0, 0, 0, 0.22);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0), 0 12px 24px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* Выравниваем сетку мастера */
+.master-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Фото чуть уже, текст чуть шире */
+  gap: 3rem;
+  align-items: center; /* Центрируем текст вертикально относительно фото */
+}
+
+/* Ограничиваем размер блока с фото */
+.master-photo-box {
+  width: 100%;
+  max-width: 400px; /* Чтобы фото не было гигантским */
+  aspect-ratio: 3 / 4; /* Пропорция портрета */
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow); /* Добавим твою тень для объема */
+  justify-self: center; /* Центрируем сам блок в его колонке */
+}
+
+.master-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Стили для текстового блока */
+.master-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.master-subtitle {
+  color: var(--accent); /* Твой синий для стажа */
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 850px) {
+  .master-grid {
+    grid-template-columns: 1fr; /* На мобилках в одну колонку */
+    text-align: center;
+    gap: 2rem;
+  }
+  .master-photo-box {
+    max-width: 300px; /* На мобилке фото поменьше */
+  }
+}
+
+@media (max-width: 1060px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .master-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 3.4rem 0;
+  }
+
+  .header-inner {
+    min-height: 74px;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+  }
+
+  .brand-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .header-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .header-nav a {
+    font-size: 0.9rem;
+  }
+
+  .header-phone {
+    order: 2;
+    margin-left: auto;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .site-header.is-scrolled .header-inner {
+    min-height: 66px;
+    padding: 0.35rem 0;
+  }
+
+  .site-header.is-scrolled .header-phone {
+    font-size: 1.05rem;
+  }
+
+  .reviews-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offers-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .offer-item::after {
+    display: none;
+  }
+
+  .floating-actions {
+    right: 14px;
+    bottom: 16px;
+  }
+}
+
+
+
+
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 3 карточки в ряд на ПК, по 1 на мобилке */
+  gap: 25px;
+  padding: 20px;
+}
+
+.service-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column; /* Вертикальный стек */
+  height: 100%; /* Карточка растягивается на всю высоту сетки */
+}
+
+.service-card h3 {
+  color: #003366; /* Твой синий цвет */
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ff9933; /* Оранжевая полоска для стиля */
+  padding-bottom: 10px;
+}
+
+.price-list {
+  flex-grow: 1; /* Этот параметр заберет всё свободное место, толкая кнопку вниз */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-row {
+  display: grid;
+  /* 1fr — название забирает всё свободное место */
+  /* auto — цена занимает столько, сколько нужно */
+  /* 85px — фиксированная ширина под кнопку, чтобы они не скакали */
+  grid-template-columns: 1fr auto 90px; 
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.price-row span:first-child {
+  font-weight: 500;
+  color: #333;
+  /* Если название слишком длинное, оно аккуратно перенесется */
+  line-height: 1.2;
+}
+
+.price-row span:nth-child(2) {
+  color: #ff7c02; /* Насыщенный оранжевый */
+  font-weight: 800;
+  font-size: 1.15rem;
+  white-space: nowrap;
+  text-align: right;
+  min-width: 90px;
+  
+  /* Вместо черной обводки используем легкую тень. 
+     Это создаст эффект четких границ, и текст не будет «мылиться» на белом фоне */
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.05); 
+  
+  /* Делаем шрифт чуть более плотным для читаемости */
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Если хочешь прямо МАКСИМАЛЬНОГО выделения, 
+   можно добавить легкую подложку именно для цифр */
+.price-row span:nth-child(2) {
+  background: rgba(255, 124, 2, 0.05); /* Едва заметный оранжевый фон */
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.price-row .btn-small {
+  justify-self: end; /* Прижимает кнопку к правому краю */
+  width: 100%;
+  text-align: center;
+  padding: 6px 4px;
+}
+
+.price-row {
+  /* Твои старые настройки grid или flex */
+  border-bottom: 1px solid #f9f9f9; 
+  padding: 10px;
+  border-radius: 8px; /* Чуть скруглим углы строки */
+  
+  /* ЭТО СДЕЛАЕТ ЕЁ ОБЪЕМНОЙ */
+  transition: all 0.2s ease;
+}
+
+/* При наведении строка с ценой будет «всплывать» */
+.price-row:hover {
+  background: white; 
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08); /* Легкая тень */
+  transform: scale(1.02); /* Чуть увеличится */
+  cursor: pointer;
+}
+
+.service-card .btn-outline, 
+.service-card a[class*="button"] { 
+  margin-top: auto; 
+  width: 100%;
+  text-align: center;
+}
+
+.btn-small {
+  background: #003366;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.btn-small:hover {
+  background: #ff9933;
+}
+
+details {
+  margin-top: auto;
+  cursor: pointer;
+}
+
+summary {
+  color: #003366;
+  font-weight: bold;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+summary:hover {
+  background: #f0f7ff;
+}
+
+/* Фикс для цен на узких экранах */
+@media (max-width: 480px) {
+  .price-row {
+    flex-direction: column; /* Цена и кнопка встают друг под друга */
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .price-row span:nth-child(2) {
+    margin-bottom: 4px;
+  }
+  .btn-small {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Блок Схема работы */
+.section-how-it-works {
+  background: var(--bg);
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #003366; /* Твой синий */
+}
+
+.works-grid {
+  display: grid;
+  /* 4 шага и 3 стрелки между ними */
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.work-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.work-icon-box {
+  color: #003366; /* Синий цвет иконок */
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.work-icon-box svg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.work-accent-line {
+  width: 35px;
+  height: 3px;
+  background: #ff7c02; /* Твой оранжевый акцент */
+  border-radius: 2px;
+}
+
+.work-step h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.work-step p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.work-arrow {
+  color: #d8e1f2;
+  width: 30px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 в ряд на планшетах */
+    gap: 40px 20px;
+  }
+  .work-arrow {
+    display: none; /* Прячем стрелки на мобилках */
+  }
+}
+
+@media (max-width: 600px) {
+  .works-grid {
+    grid-template-columns: 1fr; /* 1 в ряд на телефонах */
+  }
+}
